@@ -6,7 +6,7 @@ def encrypt(raw, n, m):
             encrypted += chr((ord(c) - ord('a') + (n * m)) % 13 + ord('a'))
         elif c >= 'n' and c <= 'z':
             encrypted += chr((ord(c) - ord('n') - (n + m)) % 13 + ord('n'))
-        elif c >= 'A' and c <= 'M':  # for the small letter number
+        elif c >= 'A' and c <= 'M':  # for the big letter number
             encrypted += chr((ord(c) - ord('A') - (n)) % 13 + ord('A'))
         elif c >= 'N' and c <= 'Z':
             encrypted += chr((ord(c) - ord('N') + (m ** 2)) % 13 + ord('N'))
@@ -22,7 +22,7 @@ def decrypt(encrypted, n,m):
             decrypted += chr((ord(c) - ord('a') - (n * m)) % 13 + ord('a'))
         elif c >= 'n' and c <= 'z':
             decrypted += chr((ord(c) - ord('n') + (n * m)) % 13 + ord('n'))
-        elif c >= 'A' and c <= 'M': # for the small letter number
+        elif c >= 'A' and c <= 'M': # for the big letter number
             decrypted += chr((ord(c) - ord('A') + (n) % 13 + ord('A')))
         elif c >= 'N' and c <= 'Z':
             decrypted += chr((ord(c) - ord('N') - (m ** 2)) % 13 + ord ('N'))
