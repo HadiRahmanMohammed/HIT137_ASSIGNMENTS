@@ -2,11 +2,11 @@
 def encrypt(raw, n, m):
     encrypted = ''
     for c in raw:
-        if c >= 'a' and c <= 'm': # for the small letter number
+        if c >= 'a' and c <= 'm': # for the small letter alphabets
             encrypted += chr((ord(c) - ord('a') + (n * m)) % 13 + ord('a'))
         elif c >= 'n' and c <= 'z':
             encrypted += chr((ord(c) - ord('n') - (n + m)) % 13 + ord('n'))
-        elif c >= 'A' and c <= 'M':  # for the big letter number
+        elif c >= 'A' and c <= 'M':  # for the big letter alphabets
             encrypted += chr((ord(c) - ord('A') - (n)) % 13 + ord('A'))
         elif c >= 'N' and c <= 'Z':
             encrypted += chr((ord(c) - ord('N') + (m ** 2)) % 13 + ord('N'))
@@ -18,11 +18,11 @@ def encrypt(raw, n, m):
 def decrypt(encrypted, n,m):
     decrypted = ''
     for c in encrypted:
-        if c >= 'a' and c <= 'm': # for the small letter number
+        if c >= 'a' and c <= 'm': # for the small letter alphabets
             decrypted += chr((ord(c) - ord('a') - (n * m)) % 13 + ord('a'))
         elif c >= 'n' and c <= 'z':
             decrypted += chr((ord(c) - ord('n') + (n * m)) % 13 + ord('n'))
-        elif c >= 'A' and c <= 'M': # for the big letter number
+        elif c >= 'A' and c <= 'M': # for the big letter alphabets
             decrypted += chr((ord(c) - ord('A') + (n) % 13 + ord('A')))
         elif c >= 'N' and c <= 'Z':
             decrypted += chr((ord(c) - ord('N') - (m ** 2)) % 13 + ord ('N'))
