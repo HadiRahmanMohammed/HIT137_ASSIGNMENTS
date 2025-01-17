@@ -1,0 +1,5 @@
+Average Seasonal Temperatures:
+Summer: None
+Autumn: None
+Winter: None
+Spring: None
